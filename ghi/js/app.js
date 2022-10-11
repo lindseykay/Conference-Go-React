@@ -19,7 +19,10 @@ window.addEventListener('DOMContentLoaded', async () => {
         if (detailResponse.ok) {
             const details = await detailResponse.json();
             const desc = document.querySelector('.card-text');
+            const image = document.querySelector('.card-img-top');
+            image.src = details.conference.location.picture_url;
             desc.innerHTML = details.conference.description;
+            console.log(details);
         }
 
       }
