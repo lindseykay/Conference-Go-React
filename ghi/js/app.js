@@ -12,7 +12,14 @@ function createCard(name, description, pictureUrl, startDate, endDate, location)
     `;
   }
 
-//
+
+function errorAlert () {
+    return `
+    <div class="alert alert-danger" role="alert">
+    Oopsies! There's been an error!
+    </div>
+    `
+}
 
 window.addEventListener('DOMContentLoaded', async () => {
 
@@ -47,8 +54,11 @@ window.addEventListener('DOMContentLoaded', async () => {
 
       }
     } catch (e) {
-        console.error(e);
-        console.log("Error!");
+        console.error("There's been an error!");
+
+        const newHTML = errorAlert();
+        const somethingWrong = document.querySelector("#somethingwrong");
+        somethingWrong.innerHTML = newHTML;
     }
 
   });
