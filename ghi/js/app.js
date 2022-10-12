@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.error("There's been an error!");
 
         const newHTML = errorAlert();
-        const somethingWrong = document.querySelector("#somethingwrong");
+        const somethingWrong = document.querySelector(".somethingwrong");
         somethingWrong.innerHTML = newHTML;
     }
 
