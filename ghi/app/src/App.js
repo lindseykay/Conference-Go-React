@@ -7,7 +7,7 @@ function App(props) {
   }
 
   return (
-    <div>
+    <React.Fragment>
     <Nav />
     <div className="container">
       <table className="table table-striped">
@@ -29,7 +29,7 @@ function App(props) {
         </tbody>
       </table>
     </div>
-    </div>
+    </React.Fragment>
 
   );
 }
