@@ -3,6 +3,7 @@ import React from 'react';
 import AttendeesList from './AttendeesList';
 import LocationForm from './LocationForm';
 import ConferenceForm from './ConferenceForm';
+import AttendeeForm from './AttendeeForm';
 
 
 function App(props) {
@@ -14,7 +15,8 @@ function App(props) {
     <>
       <Nav />
       <div className="container">
-        <ConferenceForm />
+        <AttendeeForm />
+        {/* <ConferenceForm /> */}
         {/* <LocationForm /> */}
         {/* <AttendeesList attendees={props.attendees} /> */}
       </div>

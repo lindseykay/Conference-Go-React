@@ -34,7 +34,7 @@ class ConferenceForm extends React.Component {
         delete data.locations;
         console.log(data);
 
-        const locationUrl = 'http://localhost:8000/api/conferences/';
+        const conferenceUrl = 'http://localhost:8000/api/conferences/';
         const fetchConfig = {
           method: "post",
           body: JSON.stringify(data),
@@ -43,7 +43,7 @@ class ConferenceForm extends React.Component {
           },
         };
 
-        const response = await fetch(locationUrl, fetchConfig);
+        const response = await fetch(conferenceUrl, fetchConfig);
         if (response.ok) {
           const newConference = await response.json();
           console.log(newConference);
@@ -55,7 +55,7 @@ class ConferenceForm extends React.Component {
             description: "",
             maxPresentations: "",
             maxAttendees: "",
-            locations: []
+            location: "",
             };
           this.setState(cleared);
         }
