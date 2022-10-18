@@ -5,6 +5,7 @@ import AttendConferenceForm from './AttendConferenceForm';
 import ConferenceForm from './ConferenceForm';
 import AttendeesList from './AttendeesList';
 import LocationForm from './LocationForm';
+import PresentationForm from './PresentationForm';
 
 
 function App(props) {
