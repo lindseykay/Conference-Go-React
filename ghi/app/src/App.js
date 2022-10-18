@@ -6,6 +6,7 @@ import ConferenceForm from './ConferenceForm';
 import AttendeesList from './AttendeesList';
 import LocationForm from './LocationForm';
 import PresentationForm from './PresentationForm';
+import MainPage from './MainPage';
 
 
 function App(props) {
@@ -17,8 +18,9 @@ function App(props) {
     <>
       <BrowserRouter>
         <Nav />
-        <div className="container">
+        {/* <div className="container"> */}
           <Routes>
+            <Route index element={<MainPage />} />
             <Route path="locations">
               <Route path="new" element={<LocationForm />} />
             </Route>
@@ -33,7 +35,7 @@ function App(props) {
               <Route path="new" element={<PresentationForm />} />
             </Route>
           </Routes>
-        </div>
+        {/* </div> */}
       </BrowserRouter>
     </>
 

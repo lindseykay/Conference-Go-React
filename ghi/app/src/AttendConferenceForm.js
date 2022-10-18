@@ -83,7 +83,7 @@ class AttendConferenceForm extends React.Component {
             dropdownClasses = 'form-select';
         }
         return (
-            <div className="my-5">
+            <div className="my-5 container">
             <div className="row">
               <div className="col col-sm-auto">
                 <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" />
@@ -107,7 +107,7 @@ class AttendConferenceForm extends React.Component {
                           <option value="">Choose a conference</option>
                           {this.state.conferences.map(conference => {
                             return (
-                            <option key={conference.id} value={conference.id}>
+                            <option key={conference.href} value={conference.href}>
                                 {conference.name}
                             </option>
                             );
